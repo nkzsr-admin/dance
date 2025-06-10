@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OKINAWA DANCE STUDIO | 沖縄那覇のダンススクール</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      --font-en: 'Barlow', sans-serif;
+      --font-ja: 'Noto Sans JP', sans-serif;
+    }
+    body { font-family: var(--font-ja); }
+    h1, h2, h3, nav { font-family: var(--font-en); }
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+  </style>
+</head>
+<body class="text-gray-200 bg-neutral-900">
+
+<!-- =================== Header =================== -->
+<header class="fixed top-0 inset-x-0 z-50 bg-neutral-900/80 backdrop-blur-sm">
+  <div class="max-w-screen-xl mx-auto flex items-center justify-between px-4 py-3">
+    <!-- Logo -->
+    <a href="#" class="flex items-center space-x-2">
+      <!-- Simple D style logo -->
+      <svg class="w-8 h-8 text-white" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <text x="4" y="18" font-size="16" font-family="Arial, sans-serif" fill="currentColor">O</text>
+      </svg>
+    </a>
+
+    <!-- Desktop Nav -->
+    <nav class="hidden md:flex space-x-8 text-sm tracking-wide uppercase">
+      <a href="#feature" class="hover:text-white">Feature</a>
+      <a href="#instructor" class="hover:text-white">Instructor</a>
+      <a href="#course" class="hover:text-white">Course</a>
+      <a href="#access" class="hover:text-white">Access</a>
+      <a href="#contact" class="hover:text-white">Contact</a>
+    </nav>
+
+    <!-- Hamburger -->
+    <button id="hamburger" class="md:hidden">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+  </div>
+
+
+</header>
+
+<!-- ハンバーガーメニュー本体 -->
+<div id="mobileMenu" class="fixed inset-0 z-50 bg-black/90 text-white flex flex-col items-center justify-center space-y-10 text-xl font-bold transform scale-0 transition-transform duration-300">
+
+  <!-- 🔻 閉じるボタン（右上） -->
+  <button id="closeMenu" class="absolute top-6 right-6 text-white text-3xl hover:text-amber-400 focus:outline-none">
+    &times;
+  </button>
+
+  <!-- メニューリンク -->
+  <a href="#feature" class="menu-link hover:text-amber-400">FEATURE</a>
+  <a href="#course" class="menu-link hover:text-amber-400">COURSE</a>
+  <a href="#access" class="menu-link hover:text-amber-400">ACCESS</a>
+
+</div>
+
+<!-- =================== Hero =================== -->
+<section class="relative text-center min-h-screen flex items-center justify-center px-6 overflow-hidden">
+  <!-- Background Video -->
+  <video class="absolute inset-0 w-full h-full object-cover" autoplay muted loop playsinline>
+    <source src="http://en-dance-studio.com/wp/wp-content/uploads/2022/02/dancestudio_top_final.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <div class="absolute inset-0 bg-black/60"></div>
+  <div class="relative z-10 h-full flex flex-col items-center justify-center text-center px-4">
+    <h1 class="text-4xl md:text-6xl font-bold tracking-wider mb-4">OKINAWA DANCE STUDIO</h1>
+    <p class="max-w-2xl mx-auto leading-relaxed">那覇バスターミナル徒歩3分。経験ゼロからプロ志望まで、すべてのダンサーが輝ける場所。</p>
+    <a href="#course" class="mt-8 inline-block bg-amber-500 hover:bg-amber-600 text-black font-semibold px-8 py-3 rounded-full transition">体験レッスンを予約</a>
+  </div>
+</section>
+
+<!-- =================== Intro Copy =================== -->
+<section class="relative text-center py-16 px-6 overflow-hidden">
+  <!-- Background Image -->
+  <div class="absolute inset-0 bg-[url('http://en-dance-studio.com/wp/wp-content/uploads/2021/12/about_01.jpg')] bg-cover bg-center bg-fixed"></div>
+  <!-- Dark Overlay -->
+  <div class="absolute inset-0 bg-black/60"></div>
+  <div class="relative z-10">
+    <h2 class="text-lg md:text-xl font-semibold mb-4 tracking-wide text-white">新しい自分に出会える瞬間を。</h2>
+    <p class="max-w-3xl mx-auto leading-relaxed text-sm md:text-base text-white">
+      AX ダンススタジオは、世界で活躍するインストラクター陣による多彩なレッスンを提供しています。<br class="hidden md:block">
+      初心者でも安心の基礎クラスから、プロを目指す方のための上級クラスまで、<br class="hidden md:block">
+      一人ひとりのレベル・目的に合わせた環境を整えています。
+    </p>
+  </div>
+</section>
+
+<!-- =================== Feature =================== -->
+<section id="feature" class="relative bg-neutral-800 py-20 px-4 text-gray-100">
+  <!-- Feature Title -->
+  <div class="text-center mb-16">
+    <h2 class="text-5xl md:text-6xl font-extrabold text-gray-100 tracking-wide drop-shadow-[4px_4px_0_rgba(0,0,0,1)]" style="font-family: 'Barlow', sans-serif;">FEATURE</h2>
+  </div>
+
+  <div class="max-w-screen-lg mx-auto space-y-20">
+    <!-- Feature Item 1 -->
+    <div class="md:grid md:grid-cols-2 md:gap-12 md:items-center">
+      <div>
+        <div class="text-5xl font-bold text-amber-500/50 mb-2">01</div>
+        <h3 class="text-xl font-semibold mb-2">トッププロから学べるインストラクター</h3>
+        <p class="text-sm leading-relaxed">世界的なコンテスト受賞歴を誇るダンサーが直接指導。最先端のスキルを習得できます。</p>
+      </div>
+      <figure class="mt-4 md:mt-0">
+        <img class="w-full rounded-lg shadow-lg" src="https://studio-ax.jp/wp-content/uploads/feature-01-1-1.jpg" alt="Feature 1">
+      </figure>
+    </div>
+
+    <!-- Feature Item 2 -->
+    <div class="md:grid md:grid-cols-2 md:gap-12 md:items-center">
+      <figure>
+        <img class="w-full rounded-lg shadow-lg" src="https://studio-ax.jp/wp-content/uploads/feature-02-1.jpg" alt="Feature 2">
+      </figure>
+      <div class="mt-6 md:mt-0">
+        <div class="text-5xl font-bold text-amber-500/50 mb-2">02</div>
+        <h3 class="text-xl font-semibold mb-2">駅近・通いやすさ抜群</h3>
+        <p class="text-sm leading-relaxed">那覇バスターミナルから徒歩3分の好立地。学校・仕事帰りでも気軽にレッスンへ。</p>
+      </div>
+    </div>
+
+    <!-- Feature Item 3 -->
+    <div class="md:grid md:grid-cols-2 md:gap-12 md:items-center">
+      <div>
+        <div class="text-5xl font-bold text-amber-500/50 mb-2">03</div>
+        <h3 class="text-xl font-semibold mb-2">充実したフォロー体制</h3>
+        <p class="text-sm leading-relaxed">個別カウンセリングや目標設定シートで、一人ひとりの成長をサポート。</p>
+      </div>
+      <figure class="mt-4 md:mt-0">
+        <img class="w-full rounded-lg shadow-lg" src="https://images.unsplash.com/photo-1595341888016-a392ef81b7de?auto=format&fit=crop&w=800&q=80" alt="Feature 3">
+      </figure>
+    </div>
+  </div>
+
+  <!-- Diagonal Split Decoration -->
+  <div class="absolute bottom-0 left-0 w-full h-20 bg-neutral-900 skew-y-3 origin-bottom"></div>
+</section>
+
+<!-- =================== Instructor =================== -->
+<section id="instructor" class="relative bg-[url('https://studio-ax.jp/wp-content/uploads/bg.jpg')] bg-center bg-cover py-24 bg-cover bg-center bg-fixed">
+  <div class="absolute inset-0 bg-black/70"></div>
+  <div class="relative z-10 text-center text-white px-4">
+    <!-- Instructor Title -->
+    <div class="text-center mb-16">
+      <h2 class="text-5xl md:text-6xl font-extrabold text-gray-100 tracking-wide drop-shadow-[4px_4px_0_rgba(0,0,0,1)]" style="font-family: 'Barlow', sans-serif;">INSTRUCTOR</h2>
+    </div>
+    <div class="mx-auto w-24 h-0.5 bg-amber-500 mb-8"></div>
+    <p class="max-w-2xl mx-auto text-sm leading-relaxed">バトルで世界一に輝いたストリートダンサーから、ミュージカル出演経験を持つコンテンポラリーインストラクターまで、多彩な講師陣があなたを待っています。</p>
+  </div>
+</section>
+
+<!-- =================== Course =================== -->
+<section id="course" class="relative bg-neutral-900 py-28 px-4 text-white overflow-hidden">
+  <!-- Diagonal top edge -->
+  <div class="absolute -top-10 left-0 w-full h-32 bg-black -skew-y-2 origin-top-left"></div>
+
+  <div class="relative z-10 max-w-screen-lg mx-auto space-y-24 text-center">
+    <!-- Title & Caption -->
+    <div>
+      <h2 class="text-5xl md:text-6xl font-extrabold tracking-wide drop-shadow-[4px_4px_0_rgba(0,0,0,1)]" style="font-family:'Barlow',sans-serif;">COURSE</h2>
+      <p class="text-xs text-neutral-400 mt-4">※ 価格はすべて税込です</p>
+    </div>
+
+    <!-- ==== MEMBER PLAN ==== -->
+    <div class="space-y-12 text-center text-base">
+      <h3 class="text-2xl font-semibold">会員料金</h3>
+      <div class="bg-neutral-800/80 rounded-xl shadow-lg divide-y divide-neutral-1000 text-base">
+        <!-- Header Row -->
+        <div class="grid grid-cols-3 py-4 font-semibold text-neutral-300">
+          <span>プラン</span>
+          <span>内容 / 対象</span>
+          <span class="font-bold">月額</span>
+        </div>
+        <!-- Rows -->
+        <div class="grid grid-cols-3 py-4 px-4">
+          <span class="font-semibold">ALL会員</span>
+          <span>全ての通常レッスン受け放題</span>
+          <span class="text-center font-mono text-lg">20,400円</span>
+        </div>
+        <div class="grid grid-cols-3 py-4 px-4 bg-neutral-800/60">
+          <span class="font-semibold">DAY会員</span>
+          <span>OPEN〜19:00 対象レッスン受講可</span>
+          <span class="text-center font-mono text-lg">13,720円</span>
+        </div>
+        <div class="grid grid-cols-3 py-4 px-4">
+          <span class="font-semibold">NIGHT会員</span>
+          <span>17:30以降の対象レッスン受講可</span>
+          <span class="text-center font-mono text-lg">13,720円</span>
+        </div>
+        <div class="grid grid-cols-3 py-4 px-4 bg-neutral-800/60">
+          <span class="font-semibold">MONTHLY会員</span>
+          <span>月2回まで / 3ヶ月継続必須</span>
+          <span class="text-center font-mono text-lg">6,930円</span>
+        </div>
+        <div class="grid grid-cols-3 py-4 px-4">
+          <span class="font-semibold">BEGINNER会員</span>
+          <span>入門クラス限定</span>
+          <span class="text-center font-mono text-lg">9,900円</span>
+        </div>
+        <div class="grid grid-cols-3 py-4 px-4 bg-neutral-800/60">
+          <span class="font-semibold">TICKET会員</span>
+          <span>1チケット 2,200円 / 5チケット 9,900円</span>
+          <span class="text-center font-mono text-lg">—</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==== KIDS PLAN ==== -->
+    <div class="space-y-12 text-center text-base">
+      <h3 class="text-2xl font-semibold">KIDS</h3>
+      <div class="bg-neutral-800/80 rounded-xl shadow-lg divide-y divide-neutral-1000 text-base">
+        <!-- Header Row -->
+        <div class="grid grid-cols-3 py-4 font-semibold text-neutral-300">
+          <span>プラン</span>
+          <span>内容 / 対象</span>
+          <span class="font-bold">月額</span>
+        </div>
+        <!-- Rows -->
+        <div class="grid grid-cols-3 py-4 px-4">
+          <span class="font-semibold">KIDS スタンダード</span>
+          <span>週2クラスまで選択可</span>
+          <span class="text-center font-mono text-lg">6,930円</span>
+        </div>
+        <div class="grid grid-cols-3 py-4 px-4 bg-neutral-800/60">
+          <span class="font-semibold">KIDS フリー</span>
+          <span>キッズクラス受け放題</span>
+          <span class="text-center font-mono text-lg">8,800円</span>
+        </div>
+        <div class="grid grid-cols-3 py-4 px-4">
+          <span class="font-semibold">リトルKIDS</span>
+          <span>3〜5歳向け／週1回</span>
+          <span class="text-center font-mono text-lg">5,500円</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Diagonal bottom shadow -->
+  <div class="absolute -bottom-10 right-0 w-full h-32 bg-black skew-y-3 origin-bottom-right"></div>
+</section>
+
+
+<!-- =================== ACCESS =================== -->
+<section id="access" class="relative bg-[url('https://studio-ax.jp/wp-content/uploads/access-bg-1.jpg')] bg-center bg-cover py-24 bg-cover bg-center bg-fixed">
+  <!-- Background silhouette image for dramatic stage vibe -->
+  <img src="" alt="stage silhouette" class="absolute inset-0 w-full h-full object-cover opacity-40 ">
+  <div class="absolute inset-0 bg-black/50"></div>
+
+  <div class="relative z-10 max-w-screen-xl mx-auto text-center space-y-16">
+    <!-- Section Title -->
+    <h2 class="text-5xl md:text-7xl font-extrabold tracking-widest drop-shadow-[4px_4px_0_rgba(0,0,0,1)]" style="font-family:'Barlow',sans-serif;">ACCESS</h2>
+
+    <!-- Branch Grid -->
+    <div class="grid gap-16 md:grid-cols-3">
+      <!-- Branch 1 -->
+      <div class="space-y-6">
+        <h3 class="text-2xl md:text-3xl font-semibold tracking-wide">Front, St.3</h3>
+        <p class="leading-relaxed text-sm md:text-base">
+          〒000-0000<br>
+          沖縄県那覇市宇栄原1-12-8<br>
+          小禄ビル3F
+        </p>
+        <div class="overflow-hidden rounded-lg shadow-lg md:w-72 md:h-48 mx-auto">
+          <img src="https://studio-ax.jp/wp-content/uploads/access-01.jpg" alt="Front Studio" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+        </div>
+      </div>
+
+      <!-- Branch 2 -->
+      <div class="space-y-6">
+        <h3 class="text-2xl md:text-3xl font-semibold tracking-wide">St.1, St.2</h3>
+        <p class="leading-relaxed text-sm md:text-base">
+          〒000-0000<br>
+          沖縄県那覇市宇栄原1-10-33<br>
+          さつきビル3F,4F
+        </p>
+        <div class="overflow-hidden rounded-lg shadow-lg md:w-72 md:h-48 mx-auto">
+          <img src="https://studio-ax.jp/wp-content/uploads/access-01.jpg" alt="Studio 1&2" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+        </div>
+      </div>
+
+      <!-- Branch 3 -->
+      <div class="space-y-6">
+        <h3 class="text-2xl md:text-3xl font-semibold tracking-wide">St.A, St.B, St.C</h3>
+        <p class="leading-relaxed text-sm md:text-base">
+          〒000-0000<br>
+          沖縄県那覇市宇栄原1-9-16<br>
+          高良第2ビル4F
+        </p>
+        <div class="overflow-hidden rounded-lg shadow-lg md:w-72 md:h-48 mx-auto">
+          <img src="https://studio-ax.jp/wp-content/uploads/access-01.jpg" alt="Studio A/B/C" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Google Map -->
+  <div class="w-full h-72 md:h-96 rounded-lg overflow-hidden shadow-lg mt-20 grayscale">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.742801451789!2d135.4983021152344!3d34.69375648043716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e69df3977911%3A0x2c4b4cec24f9e7ea!2z44CSNTMwLTAwMDEg5aSn6Ziq5bqc5aSn5a2m5Yy66YGT55Sj5a2m5Yy65aSn5a2m!5e0!3m2!1sja!2sjp!4v1718011628744!5m2!1sja!2sjp" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+  </div>
+
+  <!-- Decorative top & bottom dark bars -->
+  <div class="absolute top-0 left-0 w-full h-8 bg-neutral-900/80"></div>
+  <div class="absolute bottom-0 left-0 w-full h-8 bg-neutral-900/80"></div>
+</section>
+
+
+<!-- =================== Contact =================== -->
+<section id="contact" class="bg-neutral-900 py-20 px-4 text-gray-100">
+  <!-- Section Title -->
+  <h2 class="text-5xl md:text-7xl font-extrabold tracking-widest drop-shadow-[4px_4px_0_rgba(0,0,0,1)] text-center text-3xl font-bold tracking-wide mb-12" style="font-family:'Barlow',sans-serif;">CONTACT</h2>
+  <div class="max-w-screen-lg mx-auto grid md:grid-cols-3 gap-8 text-center text-sm">
+    <a href="#" class="group bg-neutral-800 p-8 rounded-lg shadow-lg hover:bg-amber-500 transition">
+      <img src="https://studio-ax.jp/wp-content/uploads/lesson-contact.jpg" alt="Contact" class="w-full h-32 object-cover rounded mb-4">
+      <span class="block font-semibold mb-2 group-hover:text-black">お問い合わせ</span>
+      <span class="text-neutral-400 group-hover:text-black">ご不明点はお気軽に</span>
+    </a>
+    <a href="#" class="group bg-neutral-800 p-8 rounded-lg shadow-lg hover:bg-amber-500 transition">
+      <img src="https://studio-ax.jp/wp-content/uploads/lesson-contact.jpg" alt="Rental" class="w-full h-32 object-cover rounded mb-4">
+      <span class="block font-semibold mb-2 group-hover:text-black">レンタルスタジオ</span>
+      <span class="text-neutral-400 group-hover:text-black">空き状況はこちら</span>
+    </a>
+    <a href="#" class="group bg-neutral-800 p-8 rounded-lg shadow-lg hover:bg-amber-500 transition">
+      <img src="https://studio-ax.jp/wp-content/uploads/lesson-contact.jpg" alt="Lesson" class="w-full h-32 object-cover rounded mb-4">
+      <span class="block font-semibold mb-2 group-hover:text-black">レッスンスケジュール</span>
+      <span class="text-neutral-400 group-hover:text-black">今月のクラスを確認</span>
+    </a>
+  </div>
+</section>
+
+<!-- =================== Footer =================== -->
+<footer class="bg-amber-50 text-neutral-800 py-10">
+  <div class="flex flex-col items-center space-y-4">
+    <svg class="w-10 h-10 text-neutral-800" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M3 20L12 4l9 16"/>
+      <path d="M9 12h6"/>
+    </svg>
+    <p class="font-bold tracking-widest">OKINAWA DANCE STUDIO</p>
+    <p class="text-sm">TEL : 12-3456-7891</p>
+    <div class="flex space-x-6">
+      <a href="#" class="hover:opacity-70" aria-label="Instagram">
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M7 2C5.343 2 4 3.343 4 5v14c0 1.657 1.343 3 3 3h10c1.657 0 3-1.343 3-3V5c0-1.657-1.343-3-3-3H7zm10 2c.552 0 1 .448 1 1v2c0 .552-.448 1-1 1h-2c-.552 0-1-.448-1-1V5c0-.552.448-1 1-1h2zm-5 3a6 6 0 110 12 6 6 0 010-12zm0 2a4 4 0 100 8 4 4 0 000-8z" />
+        </svg>
+      </a>
+      <a href="#" class="hover:opacity-70" aria-label="Twitter">
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z" />
+        </svg>
+      </a>
+    </div>
+    <p class="text-xs text-neutral-600">© 2025 OKINAWA DANCE STUDIO</p>
+  </div>
+</footer>
+
+<!-- ========== Scripts ========== -->
+<script>
+  const menu = document.getElementById('mobileMenu');
+  const hamburger = document.getElementById('hamburger');
+  const closeMenu = document.getElementById('closeMenu');
+  const menuLinks = document.querySelectorAll('.menu-link');
+  let isOpen = false;
+
+  function toggleMenu(forceClose = false) {
+    isOpen = forceClose ? false : !isOpen;
+    menu.classList.toggle('scale-0', !isOpen);
+    menu.classList.toggle('scale-100', isOpen);
+    document.body.classList.toggle('overflow-hidden', isOpen);
+  }
+
+  hamburger.addEventListener('click', () => toggleMenu());
+  closeMenu.addEventListener('click', () => toggleMenu(true));
+
+  // ✅ 各リンクをクリックしたらメニューを閉じる
+  menuLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      toggleMenu(true);
+    });
+  });
+</script>
+
+
+
+</body>
+</html>
